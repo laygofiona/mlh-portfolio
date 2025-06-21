@@ -66,3 +66,59 @@ footer p {
     margin: 0.25rem 0;
     font-size: 0.95rem;
 }
+
+img.huechange { 
+    filter: hue-rotate(230deg); 
+}
+
+main {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; 
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.legend-color {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%; 
+    margin-right: 8px;
+    border: 2px solid rgba(0,0,0,0.1);
+}
+
+.legend-armando {
+    background-color: #2E8B57;
+}
+
+.legend-fiona {
+    background-color: #4169E1; 
+}
+
+#map {
+    height: 70vh;
+    width: 90%;
+    max-width: 1200px;
+    margin-bottom: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+

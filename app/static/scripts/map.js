@@ -9,7 +9,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 // List of places we've been
-const places = [
+const fionaPlaces = [
     { name: "Toronto, Canada", coords: [43.65107, -79.347015] },
     { name: "Vancouver, Canada", coords: [49.2827, -123.1207] },
     { name: "Manila, Philippines", coords: [14.5995, 120.9842] },
@@ -21,9 +21,29 @@ const places = [
     { name: "Hong Kong City, Hong Kong ", coords: [22.3193, 114.1694]},
 ];
 
-// Add markers
-places.forEach(place => {
+const armandoPlaces = [
+  { name: "Puebla, México", coords: [19.033333, -98.183334] },
+  { name: "Heidelberg, Alemania", coords: [49.409360, 8.694723] },
+  { name: "Berlín, Alemania", coords: [52.520008, 13.404954] },
+  { name: "California, USA", coords: [36.778259, -119.417931] },
+  { name: "Miami, USA", coords: [25.761681, -80.191788] },
+  { name: "Seattle, USA", coords: [47.608013, -122.335167] },
+  { name: "Bath, Inglaterra", coords: [51.380001, -2.360000] },
+  { name: "Londres, Inglaterra", coords: [51.509865, -0.118092] },
+  { name: "Argentina (Buenos Aires)", coords: [-34.603722, -58.381592] }
+];
+
+
+fionaPlaces.forEach(place => {
     L.marker(place.coords)
      .addTo(map)
-     .bindPopup(`<b>${place.name}</b>`);
+     .bindPopup(`<b>${place.name}</b>`)
 });
+
+armandoPlaces.forEach(place => {
+    var marker  = L.marker(place.coords)
+     .addTo(map)
+     .bindPopup(`<b>${place.name}</b>`)
+     marker._icon.classList.add("huechange");
+});
+
