@@ -21,6 +21,9 @@ def hobbies():
 def about():
     return render_template('aboutUs.html', title="About Us", url=os.getenv("URL"))
 
+@app.route('/work')
+def work():
+    return render_template('workExperience.html', title="Work Experience", url=os.getenv("URL"))
 
 # map route which returns the map html page
 @app.route('/map')
