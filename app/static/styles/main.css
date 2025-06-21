@@ -25,6 +25,31 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.nav-logo img {
+    width: 200px;
+}
+
+.nav-content nav {
+    display: block;
+    width: 100%;
+    text-align: right;
+    padding-top: 0px;
+    padding-right: 0px;
+}
+
+/* Make both profiles on the same line but separated with both the same background*/
+.profiles {
+    display: flex;
+    background-color: #1d539f;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+}
+
+.profile {
+    background-color: #1d539f !important;
     align-items: center;
     padding: 2rem 1rem;
     text-align: center;
