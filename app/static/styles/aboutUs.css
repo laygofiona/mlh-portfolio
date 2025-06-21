@@ -1,0 +1,107 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #3A606E;
+    --accent-color: #88A4A8;
+    --background-color: #F4F6F8;
+    --card-bg: #ffffff;
+    --footer-bg: #607B7D;
+    --text-color: #333;
+    --white: #fff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --radius: 12px;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+/* Main Container */
+main {
+    padding: 2rem 1rem;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* About Card Styling */
+.about-content {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    max-width: 320px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.about-content:hover {
+    transform: translateY(-5px);
+}
+
+.img-container img {
+    max-height: 16rem;
+    max-width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+}
+
+/* Text Styling */
+.text-container {
+    margin-top: 1.5rem;
+}
+
+.text-container h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.text-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+}
