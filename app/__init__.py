@@ -22,3 +22,8 @@ def about():
     return render_template('aboutUs.html', title="About Us", url=os.getenv("URL"))
 
 
+# map route which returns the map html page
+@app.route('/map')
+def map():
+    return render_template('map.html', title="Places we've been", url=os.getenv("URL"))
+

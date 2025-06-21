@@ -1,0 +1,124 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #3A606E;
+    --accent-color: #88A4A8;
+    --background-color: #F4F6F8;
+    --card-bg: #ffffff;
+    --footer-bg: #607B7D;
+    --text-color: #333;
+    --white: #fff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --radius: 12px;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+/* Main Container */
+main {
+    padding: 2rem 1rem;
+}
+
+/* Styling for the map */
+#map {
+    height: 70vh;
+    width: 90vw;
+    margin: 0 auto 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+}
+
+img.huechange { 
+    filter: hue-rotate(230deg); 
+}
+
+main {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; 
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.legend-color {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%; 
+    margin-right: 8px;
+    border: 2px solid rgba(0,0,0,0.1);
+}
+
+.legend-armando {
+    background-color: #2E8B57;
+}
+
+.legend-fiona {
+    background-color: #4169E1; 
+}
+
+#map {
+    height: 70vh;
+    width: 90%;
+    max-width: 1200px;
+    margin-bottom: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+
