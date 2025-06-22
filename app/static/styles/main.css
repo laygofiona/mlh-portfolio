@@ -25,35 +25,30 @@ p, h1, h2, h3, h4, h5, h6, button {
 }
 
 /* Header Styling */
-.header {
+header {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 2rem;
+    align-items: center;
 }
 
 .nav-logo img {
-    width: 200px;
+    width: 10rem;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
 }
 
-.nav-content nav {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding-top: 0px;
-    padding-right: 0px;
+header .nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-.nav-bar {
-    width: 100%;
-    display: inline-block;
-    background-color: #1C539F;
-    font-family: "Roboto", serif;
-    font-weight: 700 !important;
-    padding-top: 10px;
+.nav-list li{
+    padding-left: 2rem;
+    color: var(--white);
 }
 
 /* Make both profiles on the same line but separated with both the same background*/
@@ -63,6 +58,7 @@ p, h1, h2, h3, h4, h5, h6, button {
     justify-content: space-around;
     width: 100%;
     padding: 20px;
+    min-height: 80vh;
 }
 
 
@@ -121,7 +117,16 @@ p, h1, h2, h3, h4, h5, h6, button {
     font-weight: 700;
 }
 
-/* Main Container */
-main {
+
+/* Footer Styling */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--white);
+    text-align: center;
     padding: 2rem 1rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
 }
