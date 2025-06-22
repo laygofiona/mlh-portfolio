@@ -15,6 +15,10 @@ def index():
 def hobbies():
     return render_template('hobbies.html', title="Our Hobbies", url=os.getenv("URL"))
 
+#Route for work experience page
+@app.route('/work')
+def work():
+    return render_template('workExperience.html', title="Work Experience", url=os.getenv("URL"))
 
 # About us route which returns the about us html page
 @app.route('/about')
