@@ -63,6 +63,11 @@ main h2 {
 }
 
 /* Individual hobby card */
+.hobby-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
 .hobby-container {
     background-color: var(--card-bg);
     border-radius: var(--radius);
@@ -70,21 +75,36 @@ main h2 {
     max-width: 320px;
     width: 100%;
     text-align: center;
-    overflow: hidden;
+    overflow: visible;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.hobby-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-}
 
 /* Image styling */
+.hobby-container .img-container {
+  position: relative;
+  padding-top: 56.25%;    
+  border-bottom: 4px solid var(--accent-color);
+}
+
+.hobby-container .img-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: transparent;
+}
+
 .hobby-container .img-container img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 4px solid var(--accent-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Text content inside the card */
