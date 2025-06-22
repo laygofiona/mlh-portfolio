@@ -32,17 +32,24 @@ def education():
     education_data = {
         "Fiona": [
             {
-                "degree": "Primary School Diploma",
-                "institution": "Andes International School",
-                "dates": "2010 - 2016",
-                "description": "School with an international curriculum.",
+                "degree": "MYP (Middle Years Programme) Certificate",
+                "institution": "International School Suva",
+                "dates": "2016 - 2019",
+                "description": "Completed Middle School at a school with an International Curriculum.",
                 "icon": "fas fa-school"
             },
             {
-                "degree": "Middle School Diploma",
-                "institution": "Andes International School",
-                "dates": "2016 - 2019",
-                "description": "Graduated with honors. ",
+                "degree": "IB Diploma Program",
+                "institution": "International School Suva",
+                "dates": "2020 - 2022",
+                "description": "Completed the IB (International Baccalaureate) Program with 40 out of 45 points.",
+                "icon": "fas fa-school"
+            },
+            {
+                "degree": "B.S. Computer Science with Honors",
+                "institution": "Trent University",
+                "dates": "2023 - 2027",
+                "description": "Currently on Dean's Honour Roll and co-director of university hackathon.",
                 "icon": "fas fa-school"
             },
         ],
