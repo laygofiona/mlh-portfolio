@@ -15,15 +15,77 @@ def index():
 def hobbies():
     return render_template('hobbies.html', title="Our Hobbies", url=os.getenv("URL"))
 
+#Route for work experience page
+@app.route('/work')
+def work():
+    return render_template('workExperience.html', title="Work Experience", url=os.getenv("URL"))
 
 # About us route which returns the about us html page
 @app.route('/about')
 def about():
     return render_template('aboutUs.html', title="About Us", url=os.getenv("URL"))
 
-@app.route('/work')
-def work():
-    return render_template('workExperience.html', title="Work Experience", url=os.getenv("URL"))
+#Route for education page
+@app.route('/education')
+def education():
+    # Create a dictionary with education data for each person
+    education_data = {
+        "Fiona": [
+            {
+                "degree": "MYP (Middle Years Programme) Certificate",
+                "institution": "International School Suva",
+                "dates": "2016 - 2019",
+                "description": "Completed Middle School at a school with an International Curriculum.",
+                "icon": "fas fa-school"
+            },
+            {
+                "degree": "IB Diploma Program",
+                "institution": "International School Suva",
+                "dates": "2020 - 2022",
+                "description": "Completed the IB (International Baccalaureate) Program with 40 out of 45 points.",
+                "icon": "fas fa-school"
+            },
+            {
+                "degree": "B.S. Computer Science with Honors",
+                "institution": "Trent University",
+                "dates": "2023 - 2027",
+                "description": "Currently on Dean's Honour Roll and co-director of university hackathon.",
+                "icon": "fas fa-school"
+            },
+        ],
+        "Armando": [
+            {
+                "degree": "Primary School Diploma",
+                "institution": "Andes International School",
+                "dates": "2010 - 2016",
+                "description": "School with an international curriculum.",
+                "icon": "fas fa-school"
+            },
+            {
+                "degree": "Middle School Diploma",
+                "institution": "Andes International School",
+                "dates": "2016 - 2019",
+                "description": "Graduated with honors. ",
+                "icon": "fas fa-school"
+            },
+            {
+                "degree": "High School Diploma",
+                "institution": "Prepa Tec Campus Puebla",
+                "dates": "2018 - 2021",
+                "description": "Program of international baccalaureate.",
+                "icon": "fas fa-school"
+            },
+            {
+                "degree": "B.S. in Mechatronics Engineering",
+                "institution": "Tecnológico de Monterrey, Campus Puebla",
+                "dates": "2021 - 2025",
+                "description": "Specializing in automation and robotics. Lead programmer for the FRC team.",
+                "icon": "fas fa-graduation-cap"
+            }
+        ]
+    }
+    # Render the education template with the education data
+    return render_template('education.html', education_data=education_data)
 
 # map route which returns the map html page
 @app.route('/map')

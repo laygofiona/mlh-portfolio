@@ -1,0 +1,112 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
+:root {
+    --primary-color: #3A606E;
+    --accent-color: #88A4A8;
+    --background-color: #F4F6F8;
+    --card-bg: #ffffff;
+    --footer-bg: #607B7D;
+    --text-color: #333;
+    --white: #fff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --radius: 12px;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: "Roboto", sans-serif;
+    color: var(--text-color);
+}
+
+
+.header { text-align: center; padding: 2rem 1rem; }
+.header h1 { font-size: 3rem; font-weight: 700; color: var(--primary-color); }
+main { padding: 0 1rem; }
+.education-section h2 { font-size: 2rem; color: var(--primary-color); margin: 3rem auto 2rem; text-align: center; }
+
+
+.timeline-container {
+    position: relative; 
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px; 
+    width: 3px;
+    height: 100%;
+    background-color: var(--accent-color);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 60px; 
+    padding-bottom: 50px; 
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+
+.timeline-icon {
+    position: absolute;
+    left: 20px; 
+    top: 0;
+    transform: translateX(-50%); 
+    width: 40px;
+    height: 40px;
+    background-color: var(--accent-color);
+    border: 3px solid var(--background-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1rem;
+    z-index: 2;
+}
+
+
+.timeline-content {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -15px; 
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent var(--card-bg) transparent transparent;
+}
+
+
+.timeline-content h3 { font-size: 1.4rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem; }
+.timeline-content .institution { font-size: 1.1rem; font-weight: 500; color: #555; margin-bottom: 0.5rem; }
+.timeline-content .dates { font-style: italic; color: #777; margin-bottom: 1rem; }
+.timeline-content .description { font-size: 0.95rem; line-height: 1.5; }
+
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
