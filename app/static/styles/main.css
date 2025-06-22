@@ -24,33 +24,6 @@ p, h1, h2, h3, h4, h5, h6, button {
     font-family: "Roboto", serif;
 }
 
-/* Header Styling */
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: var(--primary-color);
-    padding: 2rem;
-    align-items: center;
-}
-
-.nav-logo img {
-    width: 10rem;
-    display: block;
-}
-
-header .nav-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.nav-list li{
-    padding-left: 2rem;
-    color: var(--white);
-}
-
 /* Make both profiles on the same line but separated with both the same background*/
 .profiles {
     display: flex;

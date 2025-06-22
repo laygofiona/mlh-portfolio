@@ -10,6 +10,8 @@
     <meta property="og:url" content="{{ url }}">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/map.css') }}">
+    <link rel="stylesheet" href="../static/styles/navbar.css">
+
     <link rel='icon' href="{{ url_for('static', filename='img/favicon.ico') }}" type='image/x-icon' />
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -23,8 +25,18 @@
 
 <body>
     <header class="nav-bar">
-        <div class="nav-content">
-        </div>
+            <div class="nav-logo">
+                <a href="/">
+                    <img src="./static/img/logo.svg" />
+                </a>
+            </div>
+            <ul class="nav-list">
+                <li><a href="/about">About</a></li>
+                <li><a href="/education">Education</a></li>
+                <li><a href="/work">Work</a></li>
+                <li><a href="/hobbies">Hobbies</a></li>
+                 <li><a href="map">Map</a></li>
+            </ul>
     </header>
     <main>
         <div class="header">
