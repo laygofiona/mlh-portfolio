@@ -140,3 +140,7 @@ def delete_time_line_posts():
     query = TimelinePost.delete()
     query.execute()
     return f"Posts deleted successfully", 200
+
+@app.route('/timeline')
+def timeline():
+    return render_template('timeline.html', title="Timeline")

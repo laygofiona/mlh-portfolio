@@ -14,7 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="../static/styles/aboutUs.css">
+    <link rel="stylesheet" href="../static/styles/timeline.css">
     <link rel="stylesheet" href="../static/styles/navbar.css">
     <link rel='icon' href='../static/img/favicon.ico' type='image/x-icon' />
     <title>MLH Portfolio</title>
@@ -38,35 +38,38 @@
     </header>
     <main>
         <diV class="header">
-            <h1>About Us</h1>
+            <h1>Timeline</h1>
         </diV>
-        <div class="container">
-            <section class="about-content">
-                <div class="img-container">
-                    <img src="../static/img/fiona_laygo.png" alt="Picture of Fiona">
+        <div class="form-container">
+            <h2 class="form-title">Create Timeline Post</h2>
+            <form id="timeline-form">
+                <div class="form-group">
+                    <label for="name" class="form-label">Name:</label><br>
+                    <input type="text" id="name" name="name" value="Fiona" class="form-input"><br>
                 </div>
-                <div class="text-container">
-                    <h3>Fiona</h3>
-                    <p>I'm an incoming third-year computer science student at Trent University. I have experience in full-stack web development and web scraping. I enjoy building with React and TypeScript, and have used tools like Playwright and Selenium. Outside of tech, I love basketball, hackathons, and reading about astrophysics and the universe.</p>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email:</label><br>
+                    <input type="text" id="email" name="email" value="fiona@example.com" class="form-input"><br><br>
                 </div>
-            </section>
-            <section class="about-content">
-                <div class="img-container">
-                    <img src="../static/img/armando.jpg" alt="Picture of Armando">
+                <div class="form-group">
+                    <label for="content" class="form-label">Content:</label><br>
+                    <textarea id="content" name="content" value="Did something cool today!" class="form-input"></textarea><br><br>
                 </div>
-                <div class="text-container">
-                    <h3>Armando</h3>
-                    <p>I'm a Robotics & Digital Systems Engineering student at Tecnológico de Monterrey Puebla with a passion for robotics, AI and cyber physical systems. 
-                        I build web apps in React, mobile experiences in Flutter, and AI-powered solutions in Python/C++. But besides tech I have a deep passion about making music
-                        I think it's the best way to communicate what I feel.
-                    </p>
-                </div>
-            </section>
+                
+                <input type="submit" value="Submit" class="form-submit">
+            </form>
+        </div>
+        <div>
+            <h2 class="timeline-posts-title">Timeline posts</h2>
+            <div id="posts-container">
+            
+            </div>
         </div>
     </main>
     <footer>
         <p>Made in 2025 by Fiona and Armando</p>
         <p>MLF Fellowship Production Engineering</p>
     </footer>
+    <script src="../static/scripts/timeline.js"></script>
 </body>
 </html>
