@@ -6,3 +6,4 @@ flask.sqlite
 .DS_Store
 venv/
 .env
+.vscode
