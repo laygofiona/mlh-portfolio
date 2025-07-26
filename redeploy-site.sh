@@ -14,7 +14,7 @@ git fetch && git reset origin/main --hard
 
 # check if production container is running before stopping it
 echo "Checking for any running production containers"
-if [$(docker ps | grep -ic "$MY_CONTAINER") -gt 0]; then
+if [ $(docker ps | grep -ic "$MY_CONTAINER") -gt 0 ]; then
 	echo "Stopping running container: $MY_CONTAINER"
 	# there is a running container so stop it
 	docker stop $MY_CONTAINER
