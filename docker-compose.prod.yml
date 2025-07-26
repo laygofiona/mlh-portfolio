@@ -6,7 +6,7 @@ services:
   # depends on mysql container for database data and connection
 
   myportfolio:
-    container_name: my_portfolio
+    container_name: myportfolio
     build: .
     restart: always
     env_file:
@@ -28,7 +28,7 @@ services:
       - mydatabase:/var/lib/mysql
 
   # Reverse proxy setup through nginx 
-   
+
   nginx:
     container_name: nginx
     # Use nginx-certbot to serve HTTPS traffic and manage SSL

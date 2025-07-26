@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MY_CONTAINER='my_portfolio'
+MY_CONTAINER='myportfolio'
 
 # make sure script stops when a command fails
 set -eu
