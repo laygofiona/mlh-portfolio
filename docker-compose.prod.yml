@@ -36,6 +36,7 @@ services:
     restart: always
     environment:
       - CERTBOT_EMAIL=laygo.fiona@gmail.com 
+      - CERTBOT_DOMAINS=fionalaygo-portfolio.duckdns.org
     ports:
       - 80:80
       - 443:443
