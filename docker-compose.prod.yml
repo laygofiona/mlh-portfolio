@@ -24,7 +24,7 @@ services:
     image: jonasal/nginx-certbot:latest
     restart: always
     environment:
-      - CERTBOT_EMAIL
+      - CERTBOT_EMAIL=35182454+laygofiona@users.noreply.github.com
     env_file:
       - ./nginx-certbot.env
     ports:
