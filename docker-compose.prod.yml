@@ -1,39 +1,32 @@
 version: "3"
 services: 
-
-  # myportfolio container to set up flask app 
-  # automatically restart the container if it stops, crashes, or exits
-  # depends on mysql container for database data and connection
-
   myportfolio:
     container_name: myportfolio
     build: .
     restart: always
     env_file:
-      - ./app/.env
+      - .env
     depends_on:
       - mysql
-
-  # mysql container set up for database where db data is persisted in mydatabase
 
   mysql:
     container_name: mysql
     image: mariadb
     restart: always
     env_file:
-      - ./app/.env
+      - .env
     volumes:
       - mydatabase:/var/lib/mysql
-
-  # Reverse proxy setup through nginx 
 
   nginx:
     container_name: nginx
     # Use nginx-certbot to serve HTTPS traffic and manage SSL
-    image: jonasal/nginx-certbot
+    image: jonasal/nginx-certbot:latest
     restart: always
     environment:
-      - CERTBOT_EMAIL=laygo.fiona@gmail.com 
+      - CERTBOT_EMAIL
+    env_file:
+      - ./nginx-certbot.env
     ports:
       - 80:80
       - 443:443
