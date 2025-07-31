@@ -2,6 +2,7 @@
 
 MY_CONTAINER='myportfolio'
 
+
 # make sure script stops when a command fails
 set -eu
 
@@ -14,11 +15,13 @@ git fetch && git reset origin/main --hard
 
 # check if production container is running before stopping it
 echo "Checking for any running production containers"
-if [ $(docker ps | grep -ic "$MY_CONTAINER") -gt 0 ]; then
-	echo "Stopping running container: $MY_CONTAINER"
-	# there is a running container so stop it
-	docker stop $MY_CONTAINER
+# ensure container variable is not empty
+# limits docker ps output to container names only, match exact container name and count the number of matches
+if [[ -n "$MY_CONTAINER" && $(docker ps --format '{{.Names}}' | grep -w "$MY_CONTAINER" | wc -l) -gt 0 ]]; then
+    echo "Stopping running container: $MY_CONTAINER"
+    docker stop "$MY_CONTAINER"
 fi
+
 
 echo "Building portfolio production image and starting its container"
 # build docker image in docker-compose.prod.yml and start its container
