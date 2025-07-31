@@ -38,7 +38,7 @@ print(mydb)
 
 @app.route('/')
 def index():
-    return render_template('index.html', title="Armando Mac Beath", title2="Fiona", url=os.getenv("URL"))
+    return render_template('index.html', title="Armando Mac Beath", title2="Fiona Laygo", url=os.getenv("URL"))
 
 # Hobbies route which returns the hobbies html page
 @app.route('/hobbies')

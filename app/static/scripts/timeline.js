@@ -55,6 +55,7 @@ function displayPosts(posts) {
         posts.forEach(post => {
         const postDiv = document.createElement('div');
         postDiv.classList.add('post');
+        postDiv.classList.add('fade-in');
         postDiv.innerHTML = `
             <h4>${post.name} (${post.email})</h4>
             <p>${post.content}</p>
