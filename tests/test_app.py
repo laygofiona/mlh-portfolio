@@ -18,7 +18,7 @@ class AppTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         html = response.get_data(as_text=True)
         self.assertIn('<h1>Armando Mac Beath</h1>', html)
-        self.assertIn('<h1>Fiona</h1>', html)
+        self.assertIn('<h1>Fiona Laygo</h1>', html)
     
     def test_timeline(self):
         response = self.client.get('/api/timeline_post')
