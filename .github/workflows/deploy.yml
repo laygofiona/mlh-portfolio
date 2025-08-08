@@ -58,7 +58,19 @@ jobs:
       - name: Print container status
         run:  ssh my-vps 'docker ps -a'
       
-      - name: Send Discord Notification
+      - name: Send Discord Notification Successful Deployment
         run:  curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful"
+    
+  notify-failure:
+    needs: deploy
+    if: failure()
+    name: "Notify on failed deployment"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Discord Notification Failed Deployment
+        run:  curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚨 Deployment Failed"
+
+
+
 
 
